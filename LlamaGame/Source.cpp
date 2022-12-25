@@ -25,6 +25,43 @@ void swap(int* ix, int* iy) {
 	*ix = *iy;
 	*iy = temp;
 }
+// esta funcion 'bresemham' dibuja una linea entre dos puntos
+void bresemham(int x0, int y0, int x1, int y1) {
+	int dy, x, y, error;
+	int delta_x, delta_y;
+	bool steep = abs(y1 - y0) > abs(x1 - x0);
+	if (steep) {
+		swap(&x0, &y0);
+		swap(&x1, &y1);
+	}
+	if (x0 > x1) {
+		swap(&x0, &x1);
+		swap(&y0, &y1);
+	}
+	if (y0 < y1) {
+		dy = 1;
+	}
+	else {
+		dy = -1;
+	}
+	delta_x = x1 - x0;
+	delta_y = abs(y1 - y0);
+	y = y0;
+	error = 0;
+	for (x = x0; x <= x1; x++) {
+		if (steep) {
+			plot(y, x);
+		}
+		else {
+			plot(x, y);
+		}
+		error += delta_y;
+		if (2 * error >= delta_x) {
+			y += dy;
+			error -= delta_x;
+		}
+	}
+}
 //Contador y suelo
 void render(void) {
 
