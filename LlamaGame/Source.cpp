@@ -19,6 +19,12 @@ void plot(int ix, int iy) {
 	glVertex2i(ix, iy); // en la posicion (ix, iy)
 	glEnd(); // termina de dibujar el punto
 }
+// esta funcion 'swap' intercambia los valores de dos variables
+void swap(int* ix, int* iy) {
+	int temp = *ix;
+	*ix = *iy;
+	*iy = temp;
+}
 //Contador y suelo
 void render(void) {
 
