@@ -6,6 +6,6 @@
 4. Luis Fernando Leo Huamani
 5. Leyter cpp
 
-##Requisitos
+## Requisitos
 -tener instalado el Glut
 ![image](https://user-images.githubusercontent.com/90803482/209483869-641d5d60-f109-43ac-8f6a-c39a44adce49.png)
