@@ -86,8 +86,7 @@ void render(void) {
 	glBegin(GL_LINES);
 	//linea del suelo
 	glColor4f(0.647059, 0.164706, 0.164706, 1);
-	glVertex2f(0, 250);
-	glVertex2f(2000, 250);
+	bresemham(0, 250, 2000, 250);
 	glEnd();
 
 	glLineWidth(10);
