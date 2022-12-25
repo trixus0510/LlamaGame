@@ -44,7 +44,7 @@ void render(void) {
 
 	glLineWidth(10);
 	glBegin(GL_LINES);
-	//dinosaurio
+	//Color
 	glColor4f(0, 0, 0, 1);
 
 	glFlush();
