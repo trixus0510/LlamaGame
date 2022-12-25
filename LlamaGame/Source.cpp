@@ -13,7 +13,12 @@
 static int x_ = 2500;
 int score = 0;
 using namespace std;
-
+// Dibujar un punto
+void plot(int ix, int iy) {
+	glBegin(GL_POINTS); // dibuja un punto
+	glVertex2i(ix, iy); // en la posicion (ix, iy)
+	glEnd(); // termina de dibujar el punto
+}
 //Contador y suelo
 void render(void) {
 
