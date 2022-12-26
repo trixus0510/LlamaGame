@@ -46,6 +46,15 @@ void keyInput(unsigned char key, int x, int y) {
 		break;
 	}
 }
+// funcion para detectar una colecion
+bool collision(double len) {
+	//Funcion para saber cuando choca
+	if (abs(157 + x - (x_ + x + 50)) <= 100 + x) {
+		if (5 * fact + w <= 650 * len)return 1;
+		return 0;
+	}
+	return 0;
+}
 //funcion para saltar
 void specialKeyInput(int key, int x, int y) {
 	
@@ -119,8 +128,15 @@ void bresemham(int x0, int y0, int x1, int y1) {
 	}
 }
 
-//Creando Tronco Intimpa
-
+//Funcion para recetar el juego
+void reset() {
+	w = 200;
+	flag = 0;
+	walk = 0;
+	x_ = 2500;
+	animationPeriod = 4;
+	isAnimate = 0;
+}
 void generate_tree(int x_, double len) {
 	int x = 30;
 	//Intimpa
@@ -242,7 +258,35 @@ void render(void) {
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, ' ');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, ' ');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, ' ');
+	//condicion si es que choca o no el dino con el cactus
+	if (collision(1.0)) {
+		score = 0;
+		reset();
+	}
+	else if (collision(0)) {
+		score++;
+	}
+	if (w <= 200) {
+		if (walk == -20)
+			walk = 20;
+		else {
+			walk = -20;
+		}
+	}
+	else {
+		walk = 0;
+	}
 
+	if (flag == 1) {
+		if (w <= 1000) {
+			w = w + 8;
+		}
+		else {
+			flag = 0;
+		}
+	}
+	else if (w >= 200)
+		w = w - 8;
 	glFlush();
 
 }
