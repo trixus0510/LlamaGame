@@ -43,6 +43,14 @@ void keyInput(unsigned char key, int x, int y) {
 		break;
 	}
 }
+//funcion para saltar
+void specialKeyInput(int key, int x, int y) {
+	
+	if (key == GLUT_KEY_UP && flag == 0 && w <= 200.0) {
+		flag = 1;
+	}
+	glutPostRedisplay();
+}
 //declarando variables
 static int x_ = 2500;
 int score = 0;
