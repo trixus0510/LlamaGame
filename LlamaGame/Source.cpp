@@ -134,24 +134,12 @@ void generate_tree(int x_, double len) {
 	glEnd();
 	
 	// Creando Hojas Intimpa
-	
 	draw_circle(180.0, -5.0, 90, x_, 350 * len, -1, -1);
-
-
 	draw_circle(180.0, 0.8, 85, x_, 400 * len, -1, -1);
-
-
 	draw_circle(180.0, -5.0, 80, x_, 450 * len, -1, -1);
-
-
 	draw_circle(180.0, 0.0, 75, x_, 500 * len, -1, -1);
-
-
 	draw_circle(180.0, -5.0, 70, x_, 550 * len, -1, -1);
-
-
 	draw_circle(180.0, 0.0, 60, x_, 600 * len, -1, -1);
-
 	draw_circle(180.0, -5.0, 40, x_, 650 * len, -1, -1);
 }
 
