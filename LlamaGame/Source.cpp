@@ -118,6 +118,22 @@ void bresemham(int x0, int y0, int x1, int y1) {
 		}
 	}
 }
+
+/Creando Tronco Intimpa
+
+void generate_tree(int x_, double len) {
+	int x = 30;
+	//Intimpa
+	//Tronco Intimpa
+	glColor3f(0.5, 0.5, -0.5);
+	glBegin(GL_POLYGON);
+	glVertex2f(x_ - 10, 250 * len);
+	glVertex2f(x_ + 10, 250 * len);
+	glVertex2f(x_ + 10, 650 * len);
+	glVertex2f(x_ - 10, 650 * len);
+	glEnd();
+}
+
 //Contador y suelo
 void render(void) {
 
