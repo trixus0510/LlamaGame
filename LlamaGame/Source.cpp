@@ -9,6 +9,18 @@
 #include <cmath>
 #include <math.h>
 
+//variables estaticas y constantes que controlan la funcionalidad del codigo
+static int animationPeriod = 4;
+static int isAnimate = 0;
+//declarando variables de fact y rango
+const int fact = 3;
+const int x = 80;
+const double DEG2RAD = 3.1415926535897932384 / 180;
+
+static double w = 200;
+static int flag = 0;
+static int walk = 0;
+
 //declarando variables
 static int x_ = 2500;
 int score = 0;
