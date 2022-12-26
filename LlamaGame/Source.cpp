@@ -179,6 +179,6 @@ int main(int argc, char** argv) {
 	glutInitWindowPosition(50, 0);
 	glutCreateWindow("Llama Game");
 	setup();
-
+	glutDisplayFunc(render);
 	glutMainLoop();
 }
