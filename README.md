@@ -8,4 +8,5 @@
 
 ## Requisitos
 -tener instalado el Glut
-![image](https://user-images.githubusercontent.com/90803482/209483869-641d5d60-f109-43ac-8f6a-c39a44adce49.png)
+![image](https://user-images.githubusercontent.com/90803482/209486329-2163e881-f1d8-43a0-b4dd-438aafa5f051.png)
+
