@@ -21,6 +21,15 @@ static double w = 200;
 static int flag = 0;
 static int walk = 0;
 
+//funciones que da la sensacion de movimiento creo xd
+void animate(int value) {
+	if (isAnimate) {
+
+		glutPostRedisplay();
+		glutTimerFunc(animationPeriod, animate, 1);
+	}
+}
+
 //declarando variables
 static int x_ = 2500;
 int score = 0;
