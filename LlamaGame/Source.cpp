@@ -54,6 +54,19 @@ void specialKeyInput(int key, int x, int y) {
 	}
 	glutPostRedisplay();
 }
+// Agregando Función de el Area de Intimpa
+void draw_circle(double theta, double inner_radius, double outer_radius, int x, int y, int sin_sign = 1, int cos_sign = 1) {
+	//Intimpa
+	glBegin(GL_POINTS);
+	glColor3f(0.5, 0.5, -0.5);
+	for (double r = outer_radius; r >= inner_radius; r -= 8.0) {
+		for (double i = 0; i < theta; i++) {
+			double degInRad = i * DEG2RAD;
+			glVertex2f(cos_sign * cos(degInRad) * r + x, sin_sign * sin(degInRad) * r + y);
+		}
+	}
+	glEnd();
+}
 
 using namespace std;
 // Dibujar un punto
