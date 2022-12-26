@@ -263,5 +263,9 @@ int main(int argc, char** argv) {
 	glutCreateWindow("Llama Game");
 	setup();
 	glutDisplayFunc(render);
+	
+	glutKeyboardFunc(keyInput);
+	glutSpecialFunc(specialKeyInput);
+	
 	glutMainLoop();
 }
