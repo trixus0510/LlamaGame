@@ -174,8 +174,51 @@ void render(void) {
 
 	glLineWidth(10);
 	glBegin(GL_LINES);
-	//Color
-	glColor4f(0, 0, 0, 1);
+	/****** Drawing ::: Begin ******/
+	glColor3f(0.5, 0.35, 0.05);
+	//glPointSize(5.0);
+
+	// cuerpo trasero
+	bresemham(40 + x, 35 * fact + w, 40 + x, 55 * fact + w);
+	bresemham(40+x, 57 * fact + w, 38 + x, 55 * fact + w);
+	bresemham(36+x, 57 * fact + w, 38 + x, 60 * fact + w);
+	bresemham(36+x, 60 * fact + w, 80 + x, 60 * fact + w);
+	// pata llama 1 left
+	bresemham(40+x, 5 * fact + w, 40 + x, 35 * fact + w);
+	bresemham(40+x, 5 * fact + w, 45 + x, 5 * fact + w);
+	bresemham(45 + x, 5 * fact + w, 45 + x, 35 * fact + w);
+	// pata llama 2 left
+	bresemham(50 + x, 5 * fact + w, 50 + x, 35 * fact + w);
+	bresemham(50 + x, 5 * fact + w, 55 + x, 5 * fact + w);
+	bresemham(55 + x, 5 * fact + w, 55 + x, 35 * fact + w);
+	// pata llama 1 right
+	bresemham(70 + x, 5 * fact + w, 70 + x, 35 * fact + w);
+	bresemham(70 + x, 5 * fact + w, 75 + x, 5 * fact + w);
+	bresemham(75 + x, 5 * fact + w, 75 + x, 35 * fact + w);
+	// pata llama 2 right
+	bresemham(80 + x, 5 * fact + w, 80 + x, 35 * fact + w);
+	bresemham(80 + x, 5 * fact + w, 85 + x, 5 * fact + w);
+	bresemham(85 + x, 5 * fact + w, 85 + x, 35 * fact + w);
+	// ombligo
+	bresemham(55 + x, 35 * fact + w, 70 + x, 35 * fact + w);
+	// cuello curveado
+	bresemham(85 + x, 35 * fact + w, 90 + x, 50 * fact + w);
+	// cuello hacia la cabeza
+	bresemham(90 + x, 50 * fact + w, 90 + x, 85 * fact + w);// por la parte del frente
+	bresemham(80 + x, 60 * fact + w, 80 + x, 100 * fact + w); // por la parte de la espalda
+	// oido de mi iama
+	bresemham(80 + x, 100 * fact + w, 75 + x, 107 * fact + w); // linea hhacia atras
+	bresemham(75 + x, 107 * fact + w, 85 + x, 100 * fact + w);
+	// cabeza
+	bresemham(85 + x, 100 * fact + w, 90 + x, 100 * fact + w);
+	bresemham(90 + x, 100 * fact + w, 100 + x, 93 * fact + w); // perfil de la nariz
+	bresemham(100 + x, 93 * fact + w, 100 + x, 85 * fact + w); // boca
+	bresemham(90 + x, 85 * fact + w, 100 + x, 85 * fact + w); // quijada
+	//ojo
+	glBegin(GL_POINTS);
+	glVertex2i(88 + x, 94 * fact + w);
+	glEnd();
+	/****** Drawing ::: END ******/
 
 	glFlush();
 	glEnd();
