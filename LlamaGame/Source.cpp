@@ -20,8 +20,11 @@ const double DEG2RAD = 3.1415926535897932384 / 180;
 static double w = 200;
 static int flag = 0;
 static int walk = 0;
+//declarando variables
+static int x_ = 2500;
+int score = 0;
 
-//funciones que da la sensacion de movimiento creo xd
+//funciones que da la sensacion de movimiento.
 void animate(int value) {
 	if (isAnimate) {
 
@@ -51,9 +54,7 @@ void specialKeyInput(int key, int x, int y) {
 	}
 	glutPostRedisplay();
 }
-//declarando variables
-static int x_ = 2500;
-int score = 0;
+
 using namespace std;
 // Dibujar un punto
 void plot(int ix, int iy) {
