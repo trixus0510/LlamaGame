@@ -29,7 +29,20 @@ void animate(int value) {
 		glutTimerFunc(animationPeriod, animate, 1);
 	}
 }
-
+//Funciones para el uso del teclado
+void keyInput(unsigned char key, int x, int y) {
+	switch (key) {
+	case 27:
+		exit(0);
+	case ' ':
+		if (isAnimate) isAnimate = 0;
+		else {
+			isAnimate = 1;
+			animate(1);
+		}
+		break;
+	}
+}
 //declarando variables
 static int x_ = 2500;
 int score = 0;
