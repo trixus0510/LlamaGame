@@ -1,4 +1,4 @@
-# LlamaGame || c++, GLUT, Algoritmo de bresenham
+# LlamaGame || c++, GLUT y Algoritmo de bresenham
 ## Grupo 7:
 1. Jaime Ivan Carrasco Taipe
 2. Jhon Franklin Romnero Ramos
