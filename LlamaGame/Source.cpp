@@ -157,6 +157,8 @@ void render(void) {
 		glVertex2f((rand() + 31) % 2000, 150);
 	}
 	glEnd();
+	
+	generate_tree(x_, 1.0);
 
 	if (x_ >= 0)
 		x_ -= 5;
@@ -218,9 +220,5 @@ int main(int argc, char** argv) {
 	glutCreateWindow("Llama Game");
 	setup();
 	glutDisplayFunc(render);
-	
-	glutKeyboardFunc(keyInput);
-	glutSpecialFunc(specialKeyInput);
-	
 	glutMainLoop();
 }
